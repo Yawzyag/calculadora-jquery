@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <!-- Navegacion -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">
+            <!-- Imagen Navegacion -->
+            <img src="img/feliz.svg" width="40" height="40" alt="carita">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end nav-pills nav-fill" id="navbarNavDropdown">
+            <ul class="navbar-nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Welcome
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Music
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Mixes</a>
+                        <a class="dropdown-item" href="#">Videos</a>
+                        <a class="dropdown-item" href="#">Radio</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">People</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+
+    <!-- Jumbotron -->
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Calculadora</h1>
+            <p class="lead">Calculadora con boostrap y jquery</p>
+        </div>
+    </div>
+
+    <!-- Calculadora -->
+    <div class="container calculadora">
+        <div class="justify-content-md-center">
+            <div class="col-md-auto separador">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <!--Input echo con un div editable-->
+                        <div class="txtarea" placeholder="Ingrese Numero" contenteditable="true" id="num"></div>
+                        <button id="calcular" class="btn btn-success btn-block" type="button">=</button>
+                    </div>
+                    <!--Input echo con un div editable para memoria-->
+                    <div class="txtarea" id="memoria" placeholder="Memoria" contenteditable="false"></div>
+                    <button class="btn btn-dark btn-block" type="button" id="borrar">C</button>
+                    <div class="col">
+                        <button id="toM" type="button" class="btn btn-outline-dark m">Enviar a Memoria</button>
+                    </div>
+                    <div class="col">
+                        <button id="fromM" type="button" class="btn btn-outline-dark m">Traer de Memoria</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Operaciones basicas -->
+                    <div class="col">
+                        <button id="mas" type="button" class="btn btn-outline-dark btn-block b">+</button>
+                    </div>
+                    <div class="col">
+                        <button id="menos" type="button" class="btn btn-outline-dark btn-block b">-</button>
+                    </div>
+                    <div class="col">
+                        <button id="multiplicacion" type="button" class="btn btn-outline-dark btn-block b">*</button>
+                    </div>
+                    <div class="col">
+                        <button id="division" type="button" class="btn btn-outline-dark btn-block b">/</button>
+                    </div>
+                    <div class="col">
+                        <!-- Otras operaciones -->
+                        <button id="elevado" type="button" class="btn btn-outline-dark btn-block b">x
+                            <sup>y</sup>
+                        </button>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col">
+                        <button id="cuadrado" type="button" class="btn btn-outline-dark btn-block">x
+                            <sup>2</sup>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button id="inverso" type="button" class="btn btn-outline-dark btn-block">1/x</button>
+                    </div>
+                    <div class="col">
+                        <button id="raiz" type="button" class="btn btn-outline-dark btn-block">&#8730;x</button>
+                    </div>
+                    <div class="col">
+                        <button id="entero" type="button" class="btn btn-outline-dark btn-block">entero</button>
+                    </div>
+                    <div class="col">
+                        <button id="exp2" type="button" class="btn btn-outline-dark btn-block">2
+                            <sup>n</sup>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button id="nfactorial" type="button" class="btn btn-outline-dark btn-block">n!</button>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col">
+                        <button id="sumatoria" type="button" class="btn btn-outline-dark btn-block">Sumatoria de los Valores
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button id="producto" type="button" class="btn btn-outline-dark btn-block">Producto de los Valores</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <p class="text-center text-success">
+            <strong>
+                <em>los valores de sumatoria y producto deben ser separados por comas ","</em>
+            </strong>
+        </p>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="float-md-left">
+                <i class="far fa-copyright"></i> yesid.yag</p>
+            <!-- Links con iconos de Font Awesome -->
+            <div class=" float-right d-flex p-2">
+                <a href="https://facebook.com" target="_blank">
+                    <i class="fab fa-facebook-f"></i>Facebook</a>
+
+                <a href="https://plus.google.com/" target="_blank">
+                    <i class="fab fa-google-plus"></i>Google+</a>
+
+                <a href="mailto:yesid.yag@gmail.com?subject=Email%20Para%20Contacto&body=Aca%20Puedes%20Contactarme!">
+                    <i class="far fa-envelope"></i>Email</a>
+
+                <a href="https://neocities.org/site/yawzyag" target="_blank">
+                    <i class="fas fa-globe"></i>Mas</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+
+</html>

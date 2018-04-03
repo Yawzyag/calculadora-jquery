@@ -1,0 +1,247 @@
+/* fuente de la pagina */
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+* {
+    margin: 0%;
+    padding: 0%;
+    user-select: none;
+    /* user-select, hace el objeto no seleccionable */
+
+    -webkit-touch-callout: none;
+    /* anula el efecto visual del touch prolongado sobre el objeto */
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* anula feedback de color al hacer tap en link */
+
+    -webkit-tap-highlight-color: transparent;
+    /* similar anterior en algunos android */
+
+    margin: 0;
+    padding: 0;
+}
+
+/* Agregar un texto con place holder al div contenteditable */
+
+[contenteditable=true]:empty::before {
+    content: attr(placeholder);
+    display: block;
+    color: rgb(0, 128, 128);
+}
+
+div[contenteditable=true] {
+    border: 1px solid #ced4da;
+    width: 90%;
+    padding: .375rem .75rem;
+}
+
+[contenteditable=false]:empty::before {
+    content: attr(placeholder);
+    display: block;
+    color: rgba(0, 128, 128, 0.5);
+}
+
+div[contenteditable=false] {
+    border: 1px solid #ced4da;
+    width: 90%;
+    padding: .375rem .75rem;
+}
+
+/* configuracion global para una sombra a las cajitas*/
+
+:root {
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.842);
+}
+
+body {
+    background-color: cadetblue;
+    background-image: url(../img/calc.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    background: rgba(14, 3, 3, 0.6);
+}
+
+.navbar-brand img:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: all ease-in-out 500ms;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: rgba(165, 42, 42, 0.5);
+}
+
+.nav-pills .nav-link.active:hover {
+    color: rgb(68, 182, 97);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: all ease-in-out 500ms;
+}
+
+.jumbotron {
+    background: rgba(255, 255, 255, 0.5);
+    word-wrap: break-word;
+}
+
+.calculadora {
+    background: rgba(54, 42, 165, 0.5);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    width: 50vw;
+    box-shadow: var(--shadow);
+}
+
+#calcular {
+    max-width: 10vw;
+    margin: auto 0;
+    box-shadow: var(--shadow);
+}
+
+.txtarea {
+    width: 90%;
+    height: 2.5rem;
+    display: block;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    box-shadow: var(--shadow);
+}
+
+#memoria {
+    width: 70%;
+    margin: 0.6rem 0;
+}
+
+.input-group{
+    padding: 1rem 1rem;
+    border: 0.2rem solid rgba(0, 0, 3, 0.644);
+    background: rgba(16, 1, 97, 0.6);
+}
+
+.form-control {
+    box-shadow: var(--shadow);
+}
+
+.separador {
+    border: 0.2rem solid rgba(0, 0, 3, 0.644);
+    padding-top: 1rem;
+    background: rgba(245, 222, 179, 0.5);
+    border-radius: 1rem;
+}
+
+.input-group-prepend {
+    width: 100%;
+    margin: auto;
+}
+
+.btn-outline-dark {
+    background: rgba(136, 59, 7, 0.5);
+    color: black;
+    box-shadow: var(--shadow);
+    padding: 0.5rem 0;
+    margin: 1rem 0;
+}
+
+.btn-outline-dark .b {
+    background-color: rgba(104, 34, 21, 0.6);
+}
+
+.m{
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 100%;
+    background: rgba(49, 49, 136, 0.466);
+}
+
+#borrar {
+    background-color: rgba(255, 68, 0, 0.507);
+    max-width: 30%;
+    margin: auto 0;
+    box-shadow: var(--shadow);
+}
+
+#borrar:hover {
+    background-color: maroon;
+    color: lightyellow;
+}
+
+.footer {
+    color: black;
+    width: 100%;
+    height: 5rem;
+    /* Set the fixed height of the footer here */
+    /* Vertically center the text there */
+    background-color: rgba(245, 245, 245, 0.5);
+    padding-top: 1rem;
+}
+
+.footer p {
+    padding-top: 0.5rem;
+    margin: auto;
+}
+
+.footer a {
+    padding: 0.3rem;
+    color: black;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: rgba(16, 1, 70, 0.774);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: all ease-in-out 500ms;
+}
+
+.footer .svg-inline--fa {
+    margin-right: 0.5em;
+    color: brown;
+}
+
+@media (max-width: 755px) {
+    .calculadora {
+        width: 100%;
+        padding: 1rem;
+    }
+    .txtarea{
+        max-width: 80vw;
+        height: 3.5rem;
+    }
+    .input-group{
+        padding: 0.5rem 0;
+    }
+    #calcular{
+        width: 20vw;
+        height: 3.5rem;
+    }
+    #borrar{
+        height: 3.5rem;
+    }
+    #memoria {
+        width: 70%;
+    }
+    .b {
+        min-width: 3rem;
+    }
+    .footer {
+        margin-top: 2rem;
+        height: 8.5rem;
+    }
+    .footer a {
+        padding: 0.1rem;
+        border: var(--shadow);
+    }
+}
